@@ -32,7 +32,7 @@ L"Quick Starter - DrawTexture";
 
 void DrawImage::Init(HINSTANCE _hIns)
 {
-	applicationBase.Init(_hIns, "DrawTexture");
+	applicationBase.Init(_hIns, APPLICATION_TITLE);
 
 	texture.CreateTexture(_hIns, TEXTURE_FILE_NAME);
 }
