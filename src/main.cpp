@@ -2,6 +2,10 @@
 #include"CreateWindow/CreateWindow.h"
 
 #include"DrawImage/DrawImage.h"
+#include"DrawMessageBox/DrawMessageBox.h"
+#include"DrawButton/DrawButton.h"
+#include"DrawFileDialog/DrawFileDialog.h"
+
 
 //挙動を確認したい項目の#ifまたは#elifの値のみを1に変更してください//
 
@@ -17,15 +21,15 @@ int WinMain(
 #elif 0
     // Bitmap画像のロード及び表示
     DrawImage
-#elif 1
+#elif 0
     // MessageBoxの表示
-    DrawImage
-#elif 1
+    DrawMessageBox
+#elif 0
     // Buttonの作成および表示
-    DrawImage
+    DrawButton
 #elif 1
     // FileDialogの表示
-    DrawImage
+    DrawFileDialog
 #endif
 
     application;
