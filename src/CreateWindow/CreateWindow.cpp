@@ -31,6 +31,7 @@ L"Quick Starter - CreateWindow";
 void CreateApplicationWindow::Init(HINSTANCE _hIns, const std::string& _appName)
 {
     classObject.Init();
+    //defaultのWindProcedureはChWin::WndProcAまたはChWin::WndProcWになります//
     classObject.SetInstance(_hIns);
     classObject.SetBackgroundColor((HBRUSH)GetStockObject(BLACK_BRUSH));
     classObject.SetCursol(LoadCursor(NULL, IDC_ARROW));
@@ -44,6 +45,13 @@ void CreateApplicationWindow::Init(HINSTANCE _hIns, const std::string& _appName)
     creater.SetWindStyle(&style);
 
     creater.Create(windObject, _appName.c_str(), classObject.GetWindClassName());
+
+    //defaultのWindProcedureを利用すると、以下のように必要なWindProcedureを追加することが可能です//
+    windObject.SetWindProcedure(WM_DESTROY, [&](HWND _hWnd,UINT _uMsg,WPARAM _wParam,LPARAM _lParam)->LRESULT {
+        PostQuitMessage(0);
+        windObject.Release();
+        return 0;
+    });
 }
 
 
