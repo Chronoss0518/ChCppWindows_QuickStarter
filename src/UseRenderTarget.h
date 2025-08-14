@@ -60,8 +60,6 @@ int mainFunction(HINSTANCE _hIns)
 
     classObject.Init();
     classObject.SetInstance(_hIns);
-    classObject.SetBackgroundColor((HBRUSH)GetStockObject(BLACK_BRUSH));
-    classObject.SetCursol(LoadCursor(NULL, IDC_ARROW));
     classObject.RegistClass(WIND_CLASS_NAME);
 
     auto&& windSize = ChWin::GetScreenSize();
@@ -72,7 +70,6 @@ int mainFunction(HINSTANCE _hIns)
         ChWin::WindStyle style;
         style.AddOverlappedWindow();
         creater.SetWindStyle(&style);
-
 
         creater.Create(windObject, APPLICATION_TITLE, classObject.GetWindClassName());
 

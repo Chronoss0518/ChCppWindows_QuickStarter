@@ -61,8 +61,6 @@ int mainFunction(HINSTANCE _hIns)
 
     classObject.Init();
     classObject.SetInstance(_hIns);
-    classObject.SetBackgroundColor((HBRUSH)GetStockObject(BLACK_BRUSH));
-    classObject.SetCursol(LoadCursor(NULL, IDC_ARROW));
     classObject.RegistClass(WIND_CLASS_NAME);
 
     ChWin::WindObject windObject;
