@@ -11,14 +11,14 @@
 //// Bitmap画像のロード及び表示//
 //#include"DrawImage.h"
 
+//// RenderTargetを用いた描画//
+#include"UseRenderTarget.h"
+
 //// MessageBoxの表示//
 //#include"DrawMessageBox.h"
 
 //// Buttonの作成および表示//
 //#include"DrawButton.h"
-
-//// RenderTargetを用いた描画//
-#include"UseRenderTarget.h"
 
 //// FileDialogの表示//
 //#include"DrawFileDialog.h"
