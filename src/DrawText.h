@@ -72,7 +72,10 @@ int mainFunction(HINSTANCE _hIns)
 
     //TextDrawerを初期化//
     ChWin::TextDrawer().Init(windObject.GethWnd());
+    //フォントの色指定//
     ChWin::TextDrawer().SetFontColor(ChVec4(1.0f, 1.0f, 1.0f, 1.0f));
+    //フォントサイズの調整(最後のfalseはアンダーラインを入れるかの指定)//
+    ChWin::TextDrawer().SetFontData(32, 64, 64, false);
 
     while (windObject.Update())
     {
