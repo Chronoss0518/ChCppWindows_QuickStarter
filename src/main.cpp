@@ -12,13 +12,16 @@
 //#include"DrawImage.h"
 
 //// RenderTargetを用いた描画//
-#include"UseRenderTarget.h"
+//#include"UseRenderTarget.h"
 
 //// MessageBoxの表示//
 //#include"DrawMessageBox.h"
 
 //// Buttonの作成および表示//
 //#include"DrawButton.h"
+
+//// TextBoxの作成および表示//
+//#include"DrawTextBox.h"
 
 //// FileDialogの表示//
 //#include"DrawFileDialog.h"
