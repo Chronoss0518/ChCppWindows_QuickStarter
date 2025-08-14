@@ -1,0 +1,3 @@
+[submodule "src/ChCppWindows"]
+	path = src/ChCppWindows
+	url = https://github.com/Chronoss0518/ChCppWindows
