@@ -1,17 +1,109 @@
 #pragma once
+#include"../main.h"
 
-class DrawButton : public ApplicationBase
+static constexpr
+#ifdef _UNICODE
+wchar_t
+#else
+char
+#endif
+const* APPLICATION_TITLE =
+#ifdef _UNICODE
+L"Quick Starter - DrawButton";
+#else
+"Quick Starter - DrawButton";
+#endif
+
+static constexpr
+#ifdef _UNICODE
+wchar_t
+#else
+char
+#endif
+const* BUTTON_TITLE_NAME =
+#ifdef _UNICODE
+L"Test";
+#else
+"Test";
+#endif
+
+static constexpr
+#ifdef _UNICODE
+wchar_t
+#else
+char
+#endif
+const* TITLE =
+#ifdef _UNICODE
+L"Test";
+#else
+"Test";
+#endif
+
+static constexpr
+#ifdef _UNICODE
+wchar_t
+#else
+char
+#endif
+const* TEXT =
+#ifdef _UNICODE
+L"Open Message Box";
+#else
+"Open Message Box";
+#endif
+
+
+int mainFunction(HINSTANCE _hIns)
 {
-public:
+    //"CreateWindow.h"‚ðŽQl‚É‚µ‚Ä‚­‚¾‚³‚¢//
+    ChWin::WindClassObject classObject;
 
-	void Init(HINSTANCE)override;
+    classObject.Init();
+    classObject.SetInstance(_hIns);
+    classObject.SetBackgroundColor((HBRUSH)GetStockObject(BLACK_BRUSH));
+    classObject.SetCursol(LoadCursor(NULL, IDC_ARROW));
+    classObject.RegistClass(WIND_CLASS_NAME);
 
-	void Update()override;
+    ChWin::WindObject windObject;
+    {
+        auto&& windSize = ChWin::GetScreenSize();
+        ChWin::WindCreater creater = ChWin::WindCreater(_hIns);
+        creater.SetInitSize(windSize);
+        ChWin::WindStyle style;
+        style.AddOverlappedWindow();
+        creater.SetWindStyle(&style);
 
-	void Release()override;
 
-private:
-	CreateApplicationWindow applicationBase;
+        creater.Create(windObject, APPLICATION_TITLE, classObject.GetWindClassName());
 
-	ChWin::Button button;
+        windObject.SetWindProcedure(WM_DESTROY, [&](HWND _hWnd, UINT _uMsg, WPARAM _wParam, LPARAM _lParam)->LRESULT {
+            PostQuitMessage(0);
+            windObject.Release();
+            return 0;
+            });
+    }
+
+    ChWin::Button button;
+
+    button.Create(BUTTON_TITLE_NAME, ChINTPOINT(0, 0), ChINTPOINT(100, 100), windObject);
+
+    button.SetClickFunction([&](HWND _wnd, UINT _uMsg) {
+
+        ChWin::MsgBox messageBox;
+        messageBox.AddDisplayButtonType(ChWin::MsgBox::DisplayButtonType::OkCancel);
+
+        messageBox.Display(windObject.GethWnd(), TITLE, TEXT);
+        });
+
+    while (windObject.Update())
+    {
+        button.Update();
+    }
+
+    button.Release();
+
+    windObject.Release();
+    classObject.Release();
+}
 };
