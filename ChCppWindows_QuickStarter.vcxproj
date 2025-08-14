@@ -143,11 +143,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\CreateWindow\CreateWindow.cpp" />
-    <ClCompile Include="src\DrawButton\DrawButton.cpp" />
-    <ClCompile Include="src\DrawFileDialog\DrawFileDialog.cpp" />
-    <ClCompile Include="src\DrawImage\DrawImage.cpp" />
-    <ClCompile Include="src\DrawMessageBox\DrawMessageBox.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -157,6 +152,7 @@
     <ClInclude Include="src\DrawFileDialog\DrawFileDialog.h" />
     <ClInclude Include="src\DrawImage\DrawImage.h" />
     <ClInclude Include="src\DrawMessageBox\DrawMessageBox.h" />
+    <ClInclude Include="src\main.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
