@@ -1,4 +1,5 @@
 #pragma once
+#include"../main.h"
 
 static constexpr
 #ifdef _UNICODE
@@ -82,11 +83,12 @@ int mainFunction(HINSTANCE _hIns)
             });
     }
 
-    //画像を作成//
+    //メッセージボックスの表示//
     ChWin::MsgBox messageBox;
     messageBox.AddDisplayButtonType(ChWin::MsgBox::DisplayButtonType::OkCancel);
     messageBox.Display(windObject.GethWnd(), TITLE, TEXT);
 
     windObject.Release();
     classObject.Release();
+    return 0;
 }

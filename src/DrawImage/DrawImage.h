@@ -90,4 +90,5 @@ int mainFunction(HINSTANCE _hIns)
 
     windObject.Release();
     classObject.Release();
+    return 0;
 }

@@ -1,4 +1,5 @@
 #pragma once
+#include"../main.h"
 
 static constexpr
 #ifdef _UNICODE
@@ -83,12 +84,15 @@ int mainFunction(HINSTANCE _hIns)
             });
     }
 
-    //画像を作成//
     ChWin::FileDialog fileDialog;
     fileDialog.Init(windObject.GethWnd());
-    fileDialog.AddFilter("all", ".*");
+    //ファイルダイアログのフィルター設定//
+    fileDialog.AddFilter("all", "*.*");
     fileDialog.SetTitle(FILE_DIALOG_TITLE);
+    //ファイルダイアログの表示//
     fileDialog.OpenFileDialog();
+
+    //ファイルダイアログからファイルパスの取得//
     auto&& tmp = fileDialog.GetFileNameFullPath();
 
     ChWin::MsgBox messageBox;
@@ -97,4 +101,5 @@ int mainFunction(HINSTANCE _hIns)
 
     windObject.Release();
     classObject.Release();
+    return 0;
 }

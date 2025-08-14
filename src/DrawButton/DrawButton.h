@@ -97,12 +97,11 @@ int mainFunction(HINSTANCE _hIns)
             });
     }
 
+    //Buttonオブジェクトの作成//
     ChWin::Button button;
-
     button.Create(BUTTON_TITLE_NAME, ChINTPOINT(0, 0), ChINTPOINT(100, 100), windObject);
-
+    //Buttonオブジェクトのクリック時動作の作成//
     button.SetClickFunction([&](HWND _wnd, UINT _uMsg) {
-
         ChWin::MsgBox messageBox;
         messageBox.AddDisplayButtonType(ChWin::MsgBox::DisplayButtonType::OkCancel);
 
@@ -118,4 +117,5 @@ int mainFunction(HINSTANCE _hIns)
 
     windObject.Release();
     classObject.Release();
+    return 0;
 };
