@@ -92,7 +92,7 @@ int mainFunction(HINSTANCE _hIns)
     //ファイルダイアログの表示//
     fileDialog.OpenFileDialog();
 
-    //ファイルダイアログからファイルパスの取得//
+    //ファイルダイアログからファイルの絶対パスの取得//
     auto&& tmp = fileDialog.GetFileNameFullPath();
 
     ChWin::MsgBox messageBox;
