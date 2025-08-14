@@ -7,11 +7,11 @@ wchar_t
 #else
 char
 #endif
-const* TEXTURE_FILE_NAME =
+const* WIND_CLASS_NAME =
 #ifdef _UNICODE
-L"Test.bmp";
+L"SampleApplication";
 #else
-"Test.bmp";
+"SampleApplication";
 #endif
 
 static constexpr
@@ -25,6 +25,19 @@ const* APPLICATION_TITLE =
 L"Quick Starter - DrawTexture";
 #else
 "Quick Starter - DrawTexture";
+#endif
+
+static constexpr
+#ifdef _UNICODE
+wchar_t
+#else
+char
+#endif
+const* TEXTURE_FILE_NAME =
+#ifdef _UNICODE
+L"Test.bmp";
+#else
+"Test.bmp";
 #endif
 
 int mainFunction(HINSTANCE _hIns)

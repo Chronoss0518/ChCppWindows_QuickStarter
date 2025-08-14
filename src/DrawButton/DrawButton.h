@@ -7,6 +7,19 @@ wchar_t
 #else
 char
 #endif
+const* WIND_CLASS_NAME =
+#ifdef _UNICODE
+L"SampleApplication";
+#else
+"SampleApplication";
+#endif
+
+static constexpr
+#ifdef _UNICODE
+wchar_t
+#else
+char
+#endif
 const* APPLICATION_TITLE =
 #ifdef _UNICODE
 L"Quick Starter - DrawButton";
@@ -105,5 +118,4 @@ int mainFunction(HINSTANCE _hIns)
 
     windObject.Release();
     classObject.Release();
-}
 };
