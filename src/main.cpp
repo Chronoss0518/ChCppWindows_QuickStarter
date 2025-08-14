@@ -8,6 +8,9 @@
 //// Textを描画//
 //#include"DrawText.h"
 
+//// Key入力とMouseを使用//
+//#include"UseKeyInputAndMouse.h"
+
 //// Bitmap画像のロード及び表示//
 //#include"DrawImage.h"
 
