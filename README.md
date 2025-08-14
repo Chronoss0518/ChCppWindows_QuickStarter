@@ -8,38 +8,38 @@
 
 ### 切り替え方法
 
-main.cppにある以下の`#if`または`#elif`の0と1を切り替えることで、内容が切り替わるようになっています。
+main.cppにある以下のコメントアウトを切り替えることで、内容が切り替わるようになっています。
 
 ```C++
 
-#if 0 //←切り替えられる場所//
-    // Windowの作り方
-    CreateApplicationWindow
-#elif 0 //←切り替えられる場所//
-    // Bitmap画像のロード及び表示
-    DrawImage
-#elif 0 //←切り替えられる場所//
-    // MessageBoxの表示
-    DrawMessageBox
-#elif 0 //←切り替えられる場所//
-    // Buttonの作成および表示
-    DrawButton
-#elif 1 //←切り替えられる場所//
-    // FileDialogの表示
-    DrawFileDialog
-#endif
+//挙動を確認したい項目のコメントアウトを外してください//
+
+//// Windowの作り方//
+//#include"CreateWindow/CreateWindow.h"//←切り替えられる場所//
+
+//// Bitmap画像のロード及び表示//
+//#include"DrawImage/DrawImage.h"//←切り替えられる場所//
+
+//// MessageBoxの表示//
+//#include"DrawMessageBox/DrawMessageBox.h"//←切り替えられる場所//
+
+//// Buttonの作成および表示//
+//#include"DrawButton/DrawButton.h"//←切り替えられる場所//
+
+//// FileDialogの表示//
+#include"DrawFileDialog/DrawFileDialog.h"//←切り替えられる場所//
 
 ```
 
 サンプルコードは以下の通りです。
 
-- [CreateWindow](https://github.com/Chronoss0518/ChCppWindows_QuickStarter/tree/master/src/CreateWindow)
+- [CreateWindow](https://github.com/Chronoss0518/ChCppWindows_QuickStarter/tree/master/src/CreateWindow.h)
   - WindowsのWindowを表示するためのSampleです
-- [DrawImage](https://github.com/Chronoss0518/ChCppWindows_QuickStarter/tree/master/src/DrawImage)
+- [DrawImage](https://github.com/Chronoss0518/ChCppWindows_QuickStarter/tree/master/src/DrawImage.h)
   - Bitmapを画面上に表示するSampleです
-- [DrawMessageBox](https://github.com/Chronoss0518/ChCppWindows_QuickStarter/tree/master/src/DrawMessageBox)
+- [DrawMessageBox](https://github.com/Chronoss0518/ChCppWindows_QuickStarter/tree/master/src/DrawMessageBox.h)
   - MessageBoxを表示するためのSampleです
-- [DrawButton](https://github.com/Chronoss0518/ChCppWindows_QuickStarter/tree/master/src/DrawButton)
+- [DrawButton](https://github.com/Chronoss0518/ChCppWindows_QuickStarter/tree/master/src/DrawButton.h)
   - Buttonを表示し押下した際にMessageBoxを表示するSampleです
-- [DrawFileDialog](https://github.com/Chronoss0518/ChCppWindows_QuickStarter/tree/master/src/DrawFileDialog)
+- [DrawFileDialog](https://github.com/Chronoss0518/ChCppWindows_QuickStarter/tree/master/src/DrawFileDialog.h)
   - Fileを選択するためのDialogを表示し、選択したファイルの絶対パスをMessageBoxで表示するためのSampleです
