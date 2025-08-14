@@ -22,9 +22,9 @@ char
 #endif
 const* APPLICATION_TITLE =
 #ifdef _UNICODE
-L"Quick Starter - DrawTexture";
+L"Quick Starter - Use Render Target";
 #else
-"Quick Starter - DrawTexture";
+"Quick Starter - Use Render Target";
 #endif
 
 static constexpr
