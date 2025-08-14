@@ -15,19 +15,19 @@ main.cppにある以下のコメントアウトを切り替えることで、内
 //挙動を確認したい項目のコメントアウトを外してください//
 
 //// Windowの作り方//
-//#include"CreateWindow/CreateWindow.h"//←切り替えられる場所//
+//#include"CreateWindow.h"//←切り替えられる場所//
 
 //// Bitmap画像のロード及び表示//
-//#include"DrawImage/DrawImage.h"//←切り替えられる場所//
+//#include"DrawImage.h"//←切り替えられる場所//
 
 //// MessageBoxの表示//
-//#include"DrawMessageBox/DrawMessageBox.h"//←切り替えられる場所//
+//#include"DrawMessageBox.h"//←切り替えられる場所//
 
 //// Buttonの作成および表示//
-//#include"DrawButton/DrawButton.h"//←切り替えられる場所//
+//#include"DrawButton.h"//←切り替えられる場所//
 
 //// FileDialogの表示//
-#include"DrawFileDialog/DrawFileDialog.h"//←切り替えられる場所//
+#include"DrawFileDialog.h"//←切り替えられる場所//
 
 ```
 
