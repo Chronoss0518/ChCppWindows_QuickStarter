@@ -17,8 +17,14 @@ main.cppにある以下のコメントアウトを切り替えることで、内
 //// Windowの作り方//
 //#include"CreateWindow.h"//←切り替えられる場所//
 
+//// Textを描画//
+//#include"DrawText.h"//←切り替えられる場所//
+
 //// Bitmap画像のロード及び表示//
 //#include"DrawImage.h"//←切り替えられる場所//
+
+//// RenderTargetを用いた描画//
+//#include"UseRenderTarget.h"//←切り替えられる場所//
 
 //// MessageBoxの表示//
 //#include"DrawMessageBox.h"//←切り替えられる場所//
@@ -27,7 +33,7 @@ main.cppにある以下のコメントアウトを切り替えることで、内
 //#include"DrawButton.h"//←切り替えられる場所//
 
 //// FileDialogの表示//
-#include"DrawFileDialog.h"//←切り替えられる場所//
+//#include"DrawFileDialog.h"//←切り替えられる場所//
 
 ```
 
@@ -35,8 +41,12 @@ main.cppにある以下のコメントアウトを切り替えることで、内
 
 - [CreateWindow](https://github.com/Chronoss0518/ChCppWindows_QuickStarter/tree/master/src/CreateWindow.h)
   - WindowsのWindowを表示するためのSampleです
+- [DrawText](https://github.com/Chronoss0518/ChCppWindows_QuickStarter/tree/master/src/DrawText.h)
+  - Textをウィンドウ上に表示するためのSampleです
 - [DrawImage](https://github.com/Chronoss0518/ChCppWindows_QuickStarter/tree/master/src/DrawImage.h)
   - Bitmapを画面上に表示するSampleです
+- [UseRenderTarget](https://github.com/Chronoss0518/ChCppWindows_QuickStarter/tree/master/src/UseRenderTarget.h)
+  - RenderTarget(ダブルバッファリング)を用いて画像とテキストを描画するためのSampleです
 - [DrawMessageBox](https://github.com/Chronoss0518/ChCppWindows_QuickStarter/tree/master/src/DrawMessageBox.h)
   - MessageBoxを表示するためのSampleです
 - [DrawButton](https://github.com/Chronoss0518/ChCppWindows_QuickStarter/tree/master/src/DrawButton.h)
