@@ -154,6 +154,7 @@
     <ClInclude Include="src\DrawText.h" />
     <ClInclude Include="src\DrawTextBox.h" />
     <ClInclude Include="src\main.h" />
+    <ClInclude Include="src\UseKeyInputAndMouse.h" />
     <ClInclude Include="src\UseRenderTarget.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
