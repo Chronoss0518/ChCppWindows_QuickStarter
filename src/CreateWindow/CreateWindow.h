@@ -27,7 +27,7 @@ L"Quick Starter - CreateWindow";
 "Quick Starter - CreateWindow";
 #endif
 
-int main(HINSTANCE _hIns)
+inline int mainFunction(HINSTANCE _hIns)
 {
     ChWin::WindClassObject classObject;
 

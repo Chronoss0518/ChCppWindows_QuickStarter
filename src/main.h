@@ -4,4 +4,4 @@
 #include"ChCppWindows/ChCppBaseLibrary/ChBaseLibrary.h"
 #include"ChCppWindows/ChCppWinLibrary/ChWindowsLibrary.h"
 
-int main(HINSTANCE _hInstance);
+int mainFunction(HINSTANCE _hInstance);
