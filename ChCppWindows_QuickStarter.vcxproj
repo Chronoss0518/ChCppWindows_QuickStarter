@@ -152,6 +152,7 @@
     <ClInclude Include="src\DrawImage.h" />
     <ClInclude Include="src\DrawMessageBox.h" />
     <ClInclude Include="src\DrawText.h" />
+    <ClInclude Include="src\DrawTextBox.h" />
     <ClInclude Include="src\main.h" />
     <ClInclude Include="src\UseRenderTarget.h" />
   </ItemGroup>
