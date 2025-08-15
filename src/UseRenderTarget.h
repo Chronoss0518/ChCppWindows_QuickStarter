@@ -106,9 +106,11 @@ int mainFunction(HINSTANCE _hIns)
 
         renderTarget.CreateRenderTarget(dc, ChINTPOINT(size.w * 2, size.h * 2));
 
+        //HDC‚ğRenderTarget‚Ì•Û‚·‚éHDC‚Éİ’è//
         texture.Draw(renderTarget.GetRenderTarget(), 0, 0, size.w, size.h);
         texture.Draw(renderTarget.GetRenderTarget(), size.w, size.h, size.w, size.h);
 
+        //HDC‚ğRenderTarget‚Ì•Û‚·‚éHDC‚Éİ’è//
         ChWin::TextDrawer().Draw(renderTarget.GetRenderTarget(), TEXT, size.w, 0);
 
         //‰æ‘œ‚ğ‰æ–ÊƒTƒCƒY‚É‚µ‚Ä•`‰æ//
